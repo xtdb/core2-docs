@@ -1,0 +1,29 @@
+---
+const year = new Date().getFullYear();
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>XTDB Docs</title>
+	</head>
+	<body class="my-4 mx-16 bg-gray-800 text-gray-400">
+		<header class="flex justify-between items-center py-4 border-b border-b-gray-700 mb-4">
+			<img src="/images/logo-core2.svg" class="h-16" />
+			<div>Foo</div>
+		</header>
+
+		<main class="py-4">
+			<slot />
+		</main>
+
+		<footer class="flex justify-between border-t border-t-gray-700 py-4 mt-4">
+			<div>XTDB by <a href="https://juxt.pro">JUXT</a></div>
+			<div>&copy; 2017-{year} JUXT LTD.</div>
+		</footer>
+	</body>
+</html>
+
