@@ -1,0 +1,43 @@
+body {
+    @apply bg-black text-gray-400 text-lg;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-bold;
+}
+
+h1 {
+    @apply text-4xl mb-4;
+}
+
+h2 {
+    @apply text-2xl mb-2;
+}
+
+h3 {
+    @apply text-xl mb-2;
+}
+
+h4 {
+    @apply text-lg mb-2;
+}
+
+ul {
+    @apply list-disc list-inside m-2
+}
+
+a {
+   @apply hover:underline text-amber-400
+}
+
+.btn-primary, .btn-secondary {
+    @apply px-3 py-2 font-bold rounded-lg inline-block hover:no-underline
+}
+
+.btn-primary {
+    @apply bg-amber-400 hover:bg-amber-200 text-black
+}
+
+.btn-secondary {
+    @apply text-amber-400 hover:bg-amber-700
+}

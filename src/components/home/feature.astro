@@ -1,0 +1,13 @@
+---
+const {title, imgFile} = Astro.props
+const imgSrc=`/images/home/features/${imgFile}`
+---
+
+<div class="flex justify-around items-center mx-8">
+    <img src={imgSrc} class="h-64">
+    <div>
+        <h3>{title}</h3>
+
+        <slot />
+    </div>
+</div>

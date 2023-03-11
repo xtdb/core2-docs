@@ -1,5 +1,10 @@
 ---
-const year = new Date().getFullYear();
+import TopNav from '../components/top-nav.astro'
+import Footer from '../components/footer.astro'
+
+import '../styles/site.css'
+
+const {title} = Astro.props
 ---
 
 <html lang="en">
@@ -8,22 +13,16 @@ const year = new Date().getFullYear();
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>XTDB Docs</title>
+		<title>{title}</title>
 	</head>
-	<body class="my-4 mx-16 bg-gray-800 text-gray-400">
-		<header class="flex justify-between items-center py-4 border-b border-b-gray-700 mb-4">
-			<img src="/images/logo-core2.svg" class="h-16" />
-			<div>Foo</div>
-		</header>
+	<body class="my-4 mx-8">
+		<TopNav />
 
-		<main class="py-4">
+		<main class="py-4 w-auto">
 			<slot />
 		</main>
 
-		<footer class="flex justify-between border-t border-t-gray-700 py-4 mt-4">
-			<div>XTDB by <a href="https://juxt.pro">JUXT</a></div>
-			<div>&copy; 2017-{year} JUXT LTD.</div>
-		</footer>
+		<Footer />
 	</body>
 </html>
 
