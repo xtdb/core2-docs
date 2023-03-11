@@ -1,5 +1,45 @@
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Atkinson Hyperlegible";
+  src: url("/fonts/Atkinson-Hyperlegible-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Atkinson Hyperlegible";
+  src: url("/fonts/Atkinson-Hyperlegible-Italic.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Atkinson Hyperlegible";
+  src: url("/fonts/Atkinson-Hyperlegible-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: PTMono;
+  src: url("/fonts/PT-Mono-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: PTMono;
+  src: url("/fonts/PT-Mono-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+
 body {
-    @apply bg-black text-gray-400 text-lg;
+    @apply bg-black border-gray-500 text-gray-400 text-lg;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,11 +63,23 @@ h4 {
 }
 
 ul {
-    @apply list-disc list-inside m-2
+    @apply list-disc list-outside m-2 ml-8
+}
+
+ol {
+    @apply list-decimal list-outside my-4 ml-8
+}
+
+li {
+    @apply my-1
+}
+
+p {
+    @apply leading-relaxed my-4
 }
 
 a {
-   @apply hover:underline text-amber-400
+    @apply hover:underline text-amber-400
 }
 
 .btn-primary, .btn-secondary {

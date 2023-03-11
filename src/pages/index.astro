@@ -2,92 +2,126 @@
 import Layout from '../layouts/main.astro'
 import Feature from '../components/home/feature.astro'
 import SubFeature from '../components/home/sub-feature.astro'
+
 ---
 
-<Layout title="XTDB Docs">
-  <div class="flex items-stretch">
-    <div class="flex flex-col justify-between">
-      <div>
-        <h1>The open database with temporal graph query</h1>
-        <p class="text-xl">
-          XTDB is a general-purpose bitemporal database for
-          SQL, Datalog &amp; graph queries
+<Layout title="XTDB">
+  <main class="max-w-6xl mx-auto">
+    <section class="flex justify-between items-stretch">
+      <div class="flex flex-col justify-between">
+        <div>
+          <h1>The open database with temporal graph query</h1>
+          <p class="text-xl">
+            XTDB is a general-purpose bitemporal database for
+            SQL, Datalog &amp; graph queries
+          </p>
+        </div>
+        <div>
+          <a class="btn-primary mr-4"
+             href="https://docs.xtdb.com/guides/quickstart">
+            Get XTDB
+          </a>
+          <a class="btn-secondary"
+             href="mailto:hello@xtdb.com?subject=Interested in arranging a demo of XTDB">
+            Request a Demo
+          </a>
+        </div>
+      </div>
+      <img src="/images/logo.svg">
+    </section>
+
+    <section class="my-8 max-w-4xl mx-auto">
+      <Feature title="Immutable Records"
+               imgFile="immutable-records.svg" >
+        <p>
+          XTDB contains a perfect, immutable record of every fact your system has ever known.
+          See the entire history of your business, everywhere.
         </p>
-      </div>
-      <div>
-        <a class="btn-primary mr-4"
-           href="https://docs.xtdb.com/guides/quickstart">
-          Get XTDB
+        <a class="btn-secondary mt-2"
+           href="">
+          Learn More
         </a>
-        <a class="btn-secondary"
-           href="mailto:hello@xtdb.com?subject=Interested in arranging a demo of XTDB">
-          Request a Demo
+      </Feature>
+
+      <Feature title="Temporal Query"
+               imgFile="temporal-query.svg" >
+        <p>
+          Immutable records are incomplete without time-traveling queries.
+          XTDB allows you to query the entire timeline.
+          Make retroactive corrections, simplify data migrations, and get clarity on out-of-order events.
+        </p>
+        <a class="btn-secondary mt-2"
+           href="">
+          Learn More
         </a>
+      </Feature>
+
+      <Feature title="Relational Query"
+               imgFile="relational-query.svg" >
+        <p>
+          It is the interconnection of facts which makes them valuable.
+          Query the relational model with SQL and the graph model with Datalog &ndash; over the same data.
+          Explore all your data.
+          Across all implicit relationships, across all time.
+        </p>
+        <a class="btn-secondary mt-2"
+           href="">
+          Learn More
+        </a>
+      </Feature>
+    </section>
+
+    <section class="flex flex-wrap">
+      <SubFeature title="Schema-on-Read"
+                  imgFile="schema-on-read.svg">
+        As a document-oriented database, XTDB makes your data immediately available without the need for an upfront schema.
+        Both structured and unstructured data are at home in XTDB.
+      </SubFeature>
+
+      <SubFeature title="Eviction"
+                  imgFile="eviction.svg">
+        Legal regulations like GDPR often pose a challenge when designing systems around immutable data.
+        The ability to efficiently evict individual documents is essential for compliance.
+      </SubFeature>
+
+      <SubFeature title="Full-Text Search"
+                  imgFile="full-text-search.svg">
+        Powered by Lucene, XTDB’s full-text search module automatically indexes your entire data set.
+        No custom API necessary.
+        Full-text search queries can be embedded within regular queries.
+      </SubFeature>
+    </section>
+
+    <section class="flex mt-16">
+      <div class="grow-1 mt-24">
+        <h2>Success Stories</h2>
+        <p>
+          Our customers have found that XTDB is a practical yet progressive choice in nearly every domain.
+          Every business has bitemporal data.
+          Every business has complex relationships.
+        </p>
+        <a>View All Stories</a>
       </div>
-    </div>
-    <img src="/images/logo.svg">
-  </div>
+      <div class="relative grow-0 max-w-sm ml-8">
+        <div class="border rounded-xl p-4 z-0 bg-black">
+          <img class="rounded-xl object-cover mb-4" src="/images/home/pricing-ecommerce.svg">
+          <div class="text-sm">eCommerce</div>
+          <h3>Pricing Management</h3>
+          <p>Price calculation service for an automotive components catalog to support supply chain operations of a €300m+ revenue eCommerce distributor</p>
 
-  <div class="my-8">
-    <Feature title="Immutable Records"
-             imgFile="immutable-records.svg" >
-      <p>
-      XTDB contains a perfect, immutable record of every fact your system has ever known.
-      See the entire history of your business, everywhere.
-      </p>
-      <a class="btn-secondary mt-2"
-         href="">
-        Learn More
-      </a>
-    </Feature>
+          <p class="text-sm mt-8">SOURCE</p>
+          <p class="text-white">JUXT</p>
+          <a class="btn-secondary mt-6 border border-amber-500"
+             href="">
+            Request Case Study
+          </a>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full
+                    -rotate-6 -translate-y-2
+                    rounded-2xl bg-amber-700 -z-10" />
+      </div>
+    </section>
+  </main>
 
-    <Feature title="Temporal Query"
-             imgFile="temporal-query.svg" >
-      <p>
-        Immutable records are incomplete without time-traveling queries.
-        XTDB allows you to query the entire timeline.
-        Make retroactive corrections, simplify data migrations, and get clarity on out-of-order events.
-      </p>
-      <a class="btn-secondary mt-2"
-         href="">
-        Learn More
-      </a>
-    </Feature>
-
-    <Feature title="Relational Query"
-             imgFile="relational-query.svg" >
-      <p>
-        It is the interconnection of facts which makes them valuable.
-        Query the relational model with SQL and the graph model with Datalog &ndash; over the same data.
-        Explore all your data.
-        Across all implicit relationships, across all time.
-      </p>
-      <a class="btn-secondary mt-2"
-         href="">
-        Learn More
-      </a>
-    </Feature>
-  </div>
-
-  <div class="flex flex-wrap">
-    <SubFeature title="Schema-on-Read"
-                imgFile="schema-on-read.svg">
-      As a document-oriented database, XTDB makes your data immediately available without the need for an upfront schema.
-      Both structured and unstructured data are at home in XTDB.
-    </SubFeature>
-
-    <SubFeature title="Eviction"
-                imgFile="eviction.svg">
-      Legal regulations like GDPR often pose a challenge when designing systems around immutable data.
-      The ability to efficiently evict individual documents is essential for compliance.
-    </SubFeature>
-
-    <SubFeature title="Full-Text Search"
-                imgFile="full-text-search.svg">
-      Powered by Lucene, XTDB’s full-text search module automatically indexes your entire data set.
-      No custom API necessary.
-      Full-text search queries can be embedded within regular queries.
-    </SubFeature>
-  </div>
 </Layout>
 

@@ -1,0 +1,9 @@
+{
+  "name": "@xtdb/fonts",
+  "private": true,
+  "license": "MIT",
+  "version": "1.0.0",
+  "scripts": {
+    "precommit": "echo 'No precommit checks'"
+  }
+}

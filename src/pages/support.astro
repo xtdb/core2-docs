@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/main.astro'
+import Community from '../components/support/community.astro'
+---
+
+<Layout title="Support · XTDB">
+
+  <h1>Enterprise Support by JUXT</h1>
+
+  <section>
+    <p>
+      A dedicated XTDB team at <a href="https://juxt.pro">JUXT</a> maintains and supports the database as JUXT's flagship open source technology and enterprise product.
+    </p>
+
+    <p>
+      We can assist with delivery and deployment of XTDB across all platforms.
+      Support and services are end-to-end or customized to meet your needs.
+      Startup or non-profit?
+      Talk to us about working within your budget.
+    </p>
+  </section>
+
+  <section class="offers grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div>
+      <div>
+        <h2>Training</h2>
+        <p>
+          Private, instructor-led virtual and in-person training courses to suit your team's experience levels and technical requirements.
+        </p>
+
+        <ul>
+          <li>Virtual classrooms</li>
+          <li>Editor agnostic</li>
+          <li>Language agnostic</li>
+          <li>Project-based learning</li>
+        </ul>
+      </div>
+      <div class="mt-4">
+        <a class="btn-primary mr-4"
+           href="mailto:sales@xtdb.com?subject=XTDB Training&body=I would like more information about XTDB training.">
+          Book Training
+        </a>
+
+        <a href="/support/training">Learn more</a>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <h2>Consulting</h2>
+        <p>
+          The JUXT approach is to disentangle <em>code</em>, <em>data</em>, <em>form</em> and <em>time</em> to eliminate complexity.
+        </p>
+
+        <ul>
+          <li>Installation and configuration</li>
+          <li>Custom XTDB modules</li>
+          <li>Cloud support</li>
+          <li>Bespoke bitemporal logic</li>
+          <li>Complex OLTP and OLAP queries</li>
+          <li>Fully immutable data with GDPR compliance</li>
+          <li>Clojure and Kotlin</li>
+        </ul>
+      </div>
+      <div class="mt-4">
+        <a class="btn-primary mr-4"
+           href="mailto:sales@juxt.pro?subject=JUXT/XTDB Consulting&body=I am interested in hiring JUXT to work with us on our XTDB systems.">
+          Hire JUXT
+        </a>
+
+        <a href="/support/consulting">Learn more</a>
+      </div>
+    </div>
+
+    <div class="bg-amber-700 text-white">
+      <div>
+        <h2>Production Support</h2>
+        <p>
+          Get a support subscription from XTDB.
+          Eliminate risk and engage the core team directly.
+        </p>
+
+        <ul>
+          <li>Upgrade guidance</li>
+          <li>Private issue tracker</li>
+          <li>Private release channels</li>
+          <li>Rapid hotfixes</li>
+          <li>Core team consultations</li>
+          <li>Enterprise support SLAs</li>
+        </ul>
+      </div>
+      <div class="mt-4">
+        <a class="btn-primary mr-4"
+           href="mailto:sales@xtdb.com?subject=Production Support Subscription for XTDB&body=I am interested in an XTDB production support subscription.">
+          Buy Subscription
+        </a>
+
+        <a href="/support/production">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-16">
+    <h2>Community Support</h2>
+    <p>Get help from the wider XTDB open source community</p>
+
+    <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <Community title="Discuss"
+                 imgFile="discuss.svg"
+                 href="https://discuss.xtdb.com/">
+        <p>Community forums, troubleshooting, meetups and more.</p>
+      </Community>
+
+      <Community title="Zulip Chat"
+                 imgFile="zulip.svg"
+                 href="https://juxt-oss.zulipchat.com/#narrow/stream/194466-xtdb">
+        <p>Live chat with fellow users and developers.</p>
+      </Community>
+
+      <Community title="GitHub"
+                 imgFile="github.svg"
+                 href="https://github.com/xtdb/xtdb">
+        <p>Browse the project board and open issues, leave your comments, read the source.</p>
+      </Community>
+
+      <Community title="Twitter/Mastodon"
+                 imgFile="twitter.svg"
+                 href="http://www.twitter.com/xtdb_com">
+        <p>Follow <a href="https://twitter.com/xtdb_com" target="_blank">@xtdb_com</a> on Twitter or <a href="https://mastodon.social/@xtdb">@xtdb@mastodon.social</a> for daily updates</p>
+      </Community>
+    </div>
+  </section>
+
+  <section class="rounded-xl bg-blue-500 p-6 pt-2">
+    <p class="text-black text-4xl font-bold mb-6">We're here to help</h2>
+    <p class="text-3xl text-blue-900">A member of the XTDB team will be happy to speak to you about the specific needs of your business.</p>
+
+    <a class="btn-primary mt-4"
+       href="mailto:sales@xtdb.com?subject=Support for XTDB&body=Hi, I am interested in the support options for XTDB.">
+      Contact Us
+    </a>
+  </section>
+
+</Layout>
+
+<style>
+ section {
+   @apply mt-8;
+ }
+
+ section.offers > div {
+   @apply border border-gray-600 rounded-xl p-4 flex flex-col justify-between;
+ }
+
+ h2 {
+   @apply mb-2
+ }
+</style>

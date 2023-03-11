@@ -3,6 +3,18 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="flex justify-between border-t border-t-gray-700 py-4 mt-4">
-	<div>XTDB by <a class="text-white" href="https://juxt.pro">JUXT</a></div>
-	<div>&copy; 2017-{year} JUXT LTD.</div>
+	<div>XTDB by <a href="https://juxt.pro">JUXT</a></div>
+	<div>
+		<a class="mr-2" href="/contact">Contact</a>
+		<a class="mr-2" href="/support">Support</a>
+		<a class="mr-2" href="/privacy">Privacy</a>
+		<a class="mr-2" href="/terms">Terms</a>
+		<span> &copy; 2017-{year} JUXT LTD.</span>
+	</div>
 </footer>
+
+<style>
+ a {
+	 @apply text-white !important
+ }
+</style>

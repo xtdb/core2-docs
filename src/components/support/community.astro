@@ -1,0 +1,14 @@
+---
+const {title, href, imgFile} = Astro.props
+const imgSrc = `/images/community-support/${imgFile}`
+---
+<div class="border border-gray-600 p-4 rounded-xl">
+    <a href={href}>
+        <img class="block h-12 mb-4"
+             src={imgSrc}/>
+
+        <h3>{title}</h3>
+    </a>
+
+    <slot />
+</div>
