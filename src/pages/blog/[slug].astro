@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/main.astro'
+import { getCollection } from 'astro:content';
+import {format} from 'date-fns';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const { title, date, authorId } = entry.data
+
+const authorName = {
+  jdt: "Jeremy Taylor",
+  jms: "James Henderson",
+  deo: "Steven Deobald",
+}[authorId]
+
+const formattedDate = format(new Date(date), 'EEEE, dd MMMM, yyyy');
+
+const imageSrc = `/images/authors/${authorId}.webp`
+---
+
+<Layout>
+    <article class="max-w-6xl mx-auto">
+        <p class="text-sm uppercase mb-2">{formattedDate}</div>
+        <h1>{title}</h1>
+
+        <div class="flex text-white items-center mb-8">
+            <img src={imageSrc} class="h-12 rounded-full mr-4">
+            {authorName}
+        </div>
+
+        <Content />
+    </article>
+</Layout>
